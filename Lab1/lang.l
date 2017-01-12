@@ -4,10 +4,10 @@
 //
 // Scanner definition file for CST 320 project
 //
-// Author: Phil Howard 
-// phil.howard@oit.edu
+// Author: Clint Jellesed
+// victor.jellesed@oit.edu
 //
-// Date: Nov. 23, 2015
+// Date: Jan. 12, 2017
 //
 
 #include "tokens.h"
@@ -54,9 +54,10 @@ equals          ['=']
 "char"                      DO_RETURN(CHAR);
 "struct"                    DO_RETURN(STRUCT);
 "return"                    DO_RETURN(RETURN);
+"array"						DO_RETURN(ARRAY);
 [1-9][0-9]*                 DO_RETURN(INT_VAL);
 [1-9][0-9]*\.[0-9]*[1-9]    DO_RETURN(FLOAT_VAL);
-[a-zA-Z][a-zA-Z0-9]*        DO_RETURN(IDENTIFIER);
+[_a-zA-Z][_a-zA-Z0-9]*        DO_RETURN(IDENTIFIER);
 "=="                        DO_RETURN(EQUALS);
 "&&"                        DO_RETURN(AND);
 "||"                        DO_RETURN(OR);
