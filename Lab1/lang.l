@@ -45,7 +45,6 @@ equals          ['=']
 
     // token definitions go here. "if" is an example.
 "if"                        DO_RETURN(IF);
-"endif"                     DO_RETURN(ENDIF);
 "else"                      DO_RETURN(ELSE);
 "while"                     DO_RETURN(WHILE);
 "print"                     DO_RETURN(PRINT);
@@ -55,9 +54,9 @@ equals          ['=']
 "struct"                    DO_RETURN(STRUCT);
 "return"                    DO_RETURN(RETURN);
 "array"						DO_RETURN(ARRAY);
-[1-9][0-9]*                 DO_RETURN(INT_VAL);
-[1-9][0-9]*\.[0-9]*[1-9]    DO_RETURN(FLOAT_VAL);
-[_a-zA-Z][_a-zA-Z0-9]*        DO_RETURN(IDENTIFIER);
+[0-9]+                		DO_RETURN(INT_VAL);
+[0-9]+\.[0-9]+    			DO_RETURN(FLOAT_VAL);
+[_a-zA-Z][_a-zA-Z0-9]*      DO_RETURN(IDENTIFIER);
 "=="                        DO_RETURN(EQUALS);
 "&&"                        DO_RETURN(AND);
 "||"                        DO_RETURN(OR);

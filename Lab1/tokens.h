@@ -11,8 +11,8 @@
 // Date: Dec 30, 2015
 //
 
-#define IF 1000
-#define ENDIF 1001
+#define ARRAY 1000
+#define IF 1001
 #define ELSE 1002
 #define WHILE 1003
 #define PRINT 1004
